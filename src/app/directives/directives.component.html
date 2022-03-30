@@ -1,0 +1,46 @@
+<!-- <h2 *ngIf="false; else visible">
+    Directives works!
+</h2>
+<ng-template #visible>
+<h2>Directives Not Work</h2>
+</ng-template> -->
+
+<div *ngIf="false then trueBlock; else falseBlock"></div>
+
+<ng-template #trueBlock>
+<h1>Hey! I am Working</h1>
+</ng-template>
+
+<ng-template #falseBlock>
+    <h1>Hey! I am Not Working</h1>
+</ng-template>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'green'">I am Pick green Color</div>
+    <div *ngSwitchCase="'blue'">I am Pick blue Color</div>
+    <div *ngSwitchCase="'orange'">I am Pick orange Color</div>
+    <div *ngSwitchDefault>I didn't Find That Color</div>
+</div>
+
+<h2>{{color | lowercase}}</h2>
+<h2>{{color | uppercase}}</h2>
+<h2>{{massage | titlecase}}</h2>
+
+<h2>{{massage | slice:3:8}}</h2>
+<h2>{{persons | json}}</h2>
+<h2>{{4.4555 | number:'1.2-3'}}</h2>
+<h2>{{2.2555 | number:'3.7-8'}}</h2>
+<h2>{{1.3555 | number:'4.1-2'}}</h2>
+<h2>{{0.50 | percent}}</h2>
+<h2>{{0.50 | currency:'INR'}}</h2>
+<h2>{{date | date:'short'}}</h2>
+<h2>{{date | date:'shortTime'}}</h2>
+<h2>{{date | date:'shortDate'}}</h2>
+<h2>{{date | date:'medium'}}</h2>
+<h2>{{date | date:'mediumTime'}}</h2>
+<h2>{{date | date:'mediumDate'}}</h2>
+<h2>{{date | date:'long'}}</h2>
+<h2>{{date | date:'longTime'}}</h2>
+<h2>{{date | date:'shortDate'}}</h2>
+
+
